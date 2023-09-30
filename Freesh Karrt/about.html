@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FREESH KARRT</title>
+        <link rel="stylesheet" href="bootstrap.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!----------navbar---------->
+        <nav
+            class="navbar sticky-top navbar-expand-lg navbar-light bg-white"
+            id="header"
+            style="font-weight: bold"
+        >
+            <div class="container-fluid">
+                <a class="navbar-brand me-5" href="index.html"
+                    ><img
+                        src="foodlogo.png"
+                        alt="Logo"
+                        height="60px"
+                        width="60px"
+                        id="logo"
+                /></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="navigation">
+                            <a
+                                class="nav-link active mx-1"
+                                aria-current="page"
+                                href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item" id="navigation">
+                            <a class="nav-link active mx-lg-3" href="#"
+                                >About</a
+                            >
+                        </li>
+                        <li class="nav-item" id="navigation">
+                            <a
+                                class="nav-link active mx-lg-3"
+                                href="services.html"
+                                >Services</a
+                            >
+                        </li>
+                        <li class="nav-item" id="navigation">
+                            <a
+                                class="nav-link active mx-lg-3"
+                                href="contact.html"
+                                >Contact</a
+                            >
+                        </li>
+
+                        <!--------- Login open  -------->
+                        <li class="nav-item" id="navigation">
+                            <a class="nav-link active mx-lg-3">
+                                <span
+                                    data-bs-toggle="offcanvas"
+                                    href="#offcanvasExample"
+                                    role="button"
+                                    aria-controls="offcanvasExample"
+                                >
+                                    Login
+                                </span>
+
+                                <div
+                                    class="offcanvas offcanvas-start"
+                                    tabindex="-1"
+                                    id="offcanvasExample"
+                                    aria-labelledby="offcanvasExampleLabel"
+                                >
+                                    <div class="offcanvas-header">
+                                        <h5
+                                            class="offcanvas-title fs-4 fw-bold"
+                                            id="offcanvasExampleLabel"
+                                        >
+                                            Login
+                                        </h5>
+                                        <button
+                                            type="button"
+                                            class="btn-close text-reset"
+                                            data-bs-dismiss="offcanvas"
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="offcanvas-body" id="login-bg">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleFormControlInput1"
+                                                    class="form-label"
+                                                    >Email address</label
+                                                >
+                                                <input
+                                                    type="email"
+                                                    class="form-control"
+                                                    required
+                                                    id="exampleFormControlInput1"
+                                                    placeholder="Email address"
+                                                />
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label
+                                                    for="exampleFormControlInput1"
+                                                    class="form-label"
+                                                    >Password</label
+                                                >
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    required
+                                                    id="exampleFormControlInput1"
+                                                    placeholder="Password"
+                                                />
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input
+                                                    type="checkbox"
+                                                    class="form-check-input"
+                                                    id="exampleCheck1"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="exampleCheck1"
+                                                    >Remember Me</label
+                                                >
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="btn btn-primary w-100 fw-bold"
+                                                    type="submit"
+                                                >
+                                                    Login
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!--------- Login close  -------->
+
+                        <!--------- Register start  -------->
+                        <li class="nav-item" id="navigation">
+                            <a class="nav-link active mx-lg-3">
+                                <span
+                                    data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight"
+                                    role="button"
+                                >
+                                    Register
+                                </span>
+
+                                <div
+                                    class="offcanvas offcanvas-end"
+                                    tabindex="-1"
+                                    id="offcanvasRight"
+                                    aria-labelledby="offcanvasRightLabel"
+                                >
+                                    <div class="offcanvas-header">
+                                        <h5
+                                            id="offcanvasRightLabel"
+                                            class="fs-4 fw-bold"
+                                        >
+                                            Register
+                                        </h5>
+                                        <button
+                                            type="button"
+                                            class="btn-close text-reset"
+                                            data-bs-dismiss="offcanvas"
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div class="offcanvas-body" id="login-bg">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="name"
+                                                    class="form-label"
+                                                    >Name</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="name"
+                                                    required
+                                                    placeholder="Name"
+                                                />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="email"
+                                                    class="form-label"
+                                                    >Email address</label
+                                                >
+                                                <input
+                                                    type="email"
+                                                    class="form-control"
+                                                    id="email"
+                                                    required
+                                                    placeholder="Email address"
+                                                />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="number"
+                                                    class="form-label"
+                                                    >Mobile Number</label
+                                                >
+                                                <input
+                                                    type="tel"
+                                                    class="form-control"
+                                                    id="number"
+                                                    required
+                                                    placeholder="Mobile Number"
+                                                />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="password"
+                                                    class="form-label"
+                                                    >Password</label
+                                                >
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="password"
+                                                    required
+                                                    placeholder="Password"
+                                                />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label
+                                                    for="reenter"
+                                                    class="form-label"
+                                                    >Re-enter Password</label
+                                                >
+                                                <input
+                                                    type="password"
+                                                    class="form-control"
+                                                    id="reenter"
+                                                    required
+                                                    placeholder="Re-enter Password"
+                                                />
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input
+                                                    type="checkbox"
+                                                    class="form-check-input"
+                                                    id="exampleCheck1"
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="exampleCheck1"
+                                                    >Agree to all terms &
+                                                    conditions</label
+                                                >
+                                            </div>
+                                            <div>
+                                                <button
+                                                    class="btn btn-primary w-100 fw-bold"
+                                                    type="submit"
+                                                >
+                                                    Register
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <!--------- Register close  -------->
+                    </ul>
+                    <form class="d-flex">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-dark me-5" type="submit">
+                            Search
+                        </button>
+                    </form>
+                    <!-- <button
+                        class="btn btn-outline-success me-5 active fw-bold fs-5 px-3 py-1"
+                        id="login-btn"
+                        type="button"
+                    >
+                        Login
+                    </button> -->
+                </div>
+            </div>
+        </nav>
+        <!----------navbar end---------->
+
+        <!-- ========== Start about us ========== -->
+
+        <section class="about mb-5" id="top">
+            <div class="about-bg">
+                <div class="about-img">
+                    <h1 class="fs-1 fw-bold p-1">FREESH KARRT</h1>
+                    <h4 class="fs-5">About Us:</h4>
+                    <p class="fs-6">
+                        Freesh Karrt (Innovative Retail Concepts Private
+                        Limited) is India’s New online food and grocery store.
+                        With over different products and different brands in our
+                        catalogue you will find everything you are looking for.
+                        Right from fresh Fruits and Vegetables, Breads and Dairy
+                        Products, Drinks to Packaged products, Beverages, – we
+                        have it all.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== End about us ========== -->
+
+        <!-- ========== Start Blogs ========== -->
+
+        <div class="container my-5">
+            <h1 class="mb-5 text-center fw-bold">
+                Our <span id="highlight">Blogs</span>
+            </h1>
+            <div class="row row-cols-1 row-cols-md-3 g-5 p-lg-0 p-3">
+                <div class="col">
+                    <div class="card h-100 overflow-hidden" id="about-card">
+                        <img
+                            src="https://img.freepik.com/free-photo/mixed-fruits-with-apple-banana-orange-other_74190-938.jpg?w=1060&t=st=1694603735~exp=1694604335~hmac=ec5510794c579602e2f2b53e4c4ea949981b5a586923ff8c2d82c9a96e94076c"
+                            class="card-img-top"
+                            alt="..."
+                            id="blog-img"
+                        />
+                        <div class="card-body p-4">
+                            <p class="fw-light border-bottom border-dark pb-2">
+                                <ion-icon name="person"></ion-icon>&nbsp;By
+                                admin
+                            </p>
+
+                            <h5 class="card-title fw-bold">
+                                Fresh and Organic Fruits and all kinds of Fruits
+                            </h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Magnam, dolorum.
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-outline-dark border-2"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 overflow-hidden" id="about-card">
+                        <img
+                            src="https://img.freepik.com/free-photo/healthy-vegetables-wooden-table_1150-38014.jpg?w=1060&t=st=1694604728~exp=1694605328~hmac=2081874101927f6db8326c1b2bb12b2fcfa78a6f9b7fe97a63d5eccfe670fb17"
+                            class="card-img-top"
+                            alt="..."
+                            id="blog-img"
+                        />
+                        <div class="card-body p-4">
+                            <p class="fw-light border-bottom border-dark pb-2">
+                                <ion-icon name="person"></ion-icon>&nbsp;By
+                                admin
+                            </p>
+
+                            <h5 class="card-title fw-bold">
+                                Fresh and Organic Vegetables and different types
+                                of Vegetables
+                            </h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Magnam, dolorum.
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-outline-dark border-2"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 overflow-hidden" id="about-card">
+                        <img
+                            src="https://img.freepik.com/free-photo/close-up-view-black-bread-slices-nude-color-towel-spikes-flower-cutting-boards-mixed-colors-background_179666-46944.jpg?w=1060&t=st=1694604781~exp=1694605381~hmac=962f0e7f09f8c6bc715eee031267ff5aff97453bbb04f9a12aaaf7b41f2061a1"
+                            class="card-img-top"
+                            alt="..."
+                            id="blog-img"
+                        />
+                        <div class="card-body p-4">
+                            <p class="fw-light border-bottom border-dark pb-2">
+                                <ion-icon name="person"></ion-icon>&nbsp;By
+                                admin
+                            </p>
+
+                            <h5 class="card-title fw-bold">
+                                Fresh and Organic Breads and all types of Breads
+                            </h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor, sit amet consectetur
+                                adipisicing elit. Magnam, dolorum.
+                            </p>
+                            <button
+                                type="button"
+                                class="btn btn-outline-dark border-2"
+                            >
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== End Blogs ========== -->
+
+        <!-- ========== Start Customer Reviews ========== -->
+
+        <section style="background-color: #e8d0b3">
+            <div class="container mb-5 pb-5">
+                <h1 class="py-5 text-center fw-bold">
+                    Customer <span id="highlight">Reviews</span>
+                </h1>
+                <div class="row row-cols-1 row-cols-md-4 g-4 p-lg-0 p-3">
+                    <div class="col">
+                        <div class="card h-100" id="review-card">
+                            <img
+                                src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=1060&t=st=1694715006~exp=1694715606~hmac=44ba70ca13654e28425698622d1aaad7518da8cc1dc3e73cd16ad825551c3c08"
+                                class="card-img-top mt-4"
+                                alt="..."
+                            />
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold">
+                                    Michael Rodriguez
+                                </h5>
+                                <p class="card-text">
+                                    Freesh Karrt is my go-to place for all my
+                                    household needs. The selection is fantastic,
+                                    and I appreciate that they carry a variety
+                                    of organic and specialty products.
+                                </p>
+                                <p id="star">
+                                    <ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" id="review-card">
+                            <img
+                                src="https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?w=1060&t=st=1694715024~exp=1694715624~hmac=34604b408a1ace97e335de626507db54fb2b8d892607b25597e7c88185c08088"
+                                class="card-img-top mt-4"
+                                alt="..."
+                            />
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold">
+                                    David Martinez
+                                </h5>
+                                <p class="card-text">
+                                    While Freesh Karrt online has a good
+                                    selection, I find their prices to be a bit
+                                    on the higher side compared to other online
+                                    options.
+                                </p>
+                                <p id="star">
+                                    <ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star-half"></ion-icon>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" id="review-card">
+                            <img
+                                src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=1060&t=st=1694715039~exp=1694715639~hmac=de3419b366f7977074bbf7804b09d8991fad8728a8fe1e20caf55ebde653dd5c"
+                                class="card-img-top mt-4"
+                                alt="..."
+                            />
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold">
+                                    Sarah Johnson
+                                </h5>
+                                <p class="card-text">
+                                    I recently started shopping at Freesh Karrt
+                                    and I've been pleasantly surprised by the
+                                    quality of their produce. The fruits and
+                                    vegetables are always fresh.
+                                </p>
+                                <p id="star">
+                                    <ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100" id="review-card">
+                            <img
+                                src="https://img.freepik.com/free-photo/young-woman-with-round-glasses-yellow-sweater_273609-7091.jpg?w=1060&t=st=1694715054~exp=1694715654~hmac=3cd0c26733767724c439cac9be44224b24b9add3f37d0aab7970bfd0445e6601"
+                                class="card-img-top mt-4"
+                                alt="..."
+                            />
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold">Emily Turner</h5>
+                                <p class="card-text">
+                                    I love the convenience of shopping at Freesh
+                                    Karrt online. The website is intuitive, and
+                                    they have a wide range of products
+                                    available. The delivery process is
+                                    efficient.
+                                </p>
+                                <p id="star">
+                                    <ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star"></ion-icon
+                                    ><ion-icon name="star-half"></ion-icon>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== End Customer Reviews ========== -->
+
+        <!-- ========== Start FAQ ========== -->
+        <div class="container mb-5 px-lg-0 px-4">
+            <h1 class="fw-bold mb-5 text-center">Frequently Ask Question?</h1>
+            <div class="accordion border-dark border-3">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button
+                                class="accordion-button fw-bold border-dark"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne"
+                                aria-expanded="true"
+                                aria-controls="collapseOne"
+                            >
+                                Why would we buy products from Freesh Karrt?
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                <strong
+                                    >Freesh Karrt is a legal and Genuine
+                                    Website.</strong
+                                >
+                                Shopping with us is incredibly convenient. You
+                                can browse, select, and order your favorite food
+                                items from the comfort of your home, office, or
+                                anywhere with internet access. We're open 24/7,
+                                so you can shop at your convenience.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button
+                                class="accordion-button collapsed fw-bold"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo"
+                            >
+                                Are your products natural?
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                <strong
+                                    >Yes, at Freesh Karrt, we are committed to
+                                    providing our customers with high-quality
+                                    and natural food products.
+                                </strong>
+                                We source our ingredients carefully, prioritize
+                                organic and locally grown options whenever
+                                possible, and avoid artificial additives and
+                                preservatives. Our dedication to offering
+                                natural and wholesome products is a core part of
+                                our mission to provide you with the best food
+                                options.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button
+                                class="accordion-button collapsed fw-bold"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                            >
+                                What is your return or refund policy?
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                <strong
+                                    >We have a customer satisfaction guarantee.
+                                </strong>
+                                If you encounter any issues with your order,
+                                please contact us immediately, and we will work
+                                to resolve the matter or provide a refund,
+                                depending on the circumstances.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button
+                                class="accordion-button collapsed fw-bold"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour"
+                                aria-expanded="false"
+                                aria-controls="collapseFour"
+                            >
+                                How can I place an order on Freesh Karrt?
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFour"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                <strong>To place an order,</strong> simply
+                                browse our menu, select the items you'd like to
+                                purchase, and add them to your cart. Then,
+                                proceed to the checkout page to finalize your
+                                order.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button
+                                class="accordion-button collapsed fw-bold"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive"
+                                aria-expanded="false"
+                                aria-controls="collapseFive"
+                            >
+                                How long does it take for my order to be
+                                delivered?
+                            </button>
+                        </h2>
+                        <div
+                            id="collapseFive"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample"
+                        >
+                            <div class="accordion-body">
+                                <strong
+                                    >Delivery times vary based on your location
+                                    and current demand.</strong
+                                >
+                                On average, orders are delivered within [insert
+                                estimated time, e.g., 30-60 minutes]. You can
+                                track your order in real-time using our tracking
+                                feature.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== End FAQ ========== -->
+
+        <!-----------Footer start---------->
+
+        <footer
+            class="text-center text-dark pt-5"
+            style="background-color: #929fba"
+        >
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col">
+                    <h5 class="fw-bold">Newsletter</h5>
+                    <p>Subscribe for Latest Updates</p>
+                </div>
+                <div class="col">
+                    <div class="form mb-3 px-4 px-lg-0">
+                        <input
+                            type="email"
+                            class="form-control border-dark text-center"
+                            id="email"
+                            placeholder="Email address"
+                        />
+                    </div>
+                </div>
+                <div class="col">
+                    <button class="btn btn-dark">Subscribe</button>
+                </div>
+            </div>
+            <div class="row pb-3 border-bottom">
+                <div
+                    class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center align-items-center"
+                >
+                    <a href="index.html">
+                        <img src="foodlogo.png" id="foot-img" />
+                    </a>
+                </div>
+                <div
+                    class="col-sm-12 col-md-4 col-lg-4 pb-4 pb-lg-0 d-flex flex-column justify-content-center align-items-center"
+                >
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <a href="index.html" class="nav-link fw-bold" id="foot-links"
+                        ><ion-icon name="arrow-forward-outline"></ion-icon
+                            >Home</a
+                    >
+
+                    <a
+                        href="about.html"
+                        class="nav-link fw-bold"
+                        id="foot-links"
+                        ><ion-icon name="arrow-forward-outline"></ion-icon
+                            >About</a
+                    >
+                    <a
+                        href="services.html"
+                        class="nav-link fw-bold"
+                        id="foot-links"
+                        ><ion-icon name="arrow-forward-outline"></ion-icon
+                            >Services</a
+                    >
+                    <a
+                        href="contact.html"
+                        class="nav-link fw-bold"
+                        id="foot-links"
+                        ><ion-icon name="arrow-forward-outline"></ion-icon
+                            >Contact</a
+                    >
+                </div>
+                <div
+                    class="col-sm-12 col-md-4 col-lg-4 h-100 my-auto"
+                    id="social-img"
+                >
+                    <h6>Follow Us On:</h6>
+                    <img
+                        src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-1024.png"
+                        alt="Instagram"
+                        class="m-2"
+                    />
+                    <img
+                        src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-facebook_-1024.png"
+                        alt="Facebook"
+                        class="m-2"
+                    />
+                    <img
+                        src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter2_colored_svg-1024.png"
+                        alt="Twitter"
+                        class="m-2"
+                    />
+                </div>
+            </div>
+            <div class="row col-lg-12 pt-2" id="copyright">
+                <h6>Copyright&copy;2022-2024 Food Shop Pvt. Ltd.</h6>
+            </div>
+        </footer>
+        <!-----------Footer end---------->
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>

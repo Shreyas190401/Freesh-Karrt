@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Phudu&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;400&family=Rubik+Iso&display=swap");
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*------------ navbar start-----------*/
+
+#header {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+#logo {
+    object-fit: contain;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+#logo:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    transform: scale(1.25);
+}
+#navigation a {
+    position: relative;
+    
+    transition: all ease 0.3s;
+}
+#navigation a:hover {
+    color: orangered;
+}
+#navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 80%;
+    width: 100%;
+    height: 2.5px;
+    background-color: orangered;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+#navigation a:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+/* #login-btn {
+    background-color: transparent;
+    color: #4592af;
+    border: 2px solid #4592af;
+    transition: all ease 0.5s;
+}
+#login-btn:hover {
+    color: #fff;
+    background-color: #4592af;
+} */
+
+/*------------ navbar end----------- */
+
+
+/*------------ Main banner start -----------*/
+
+#main-banner {
+    background: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.2)),
+        url(https://img.freepik.com/free-photo/top-view-vegetables-circular-frame_23-2149271086.jpg?w=1060&t=st=1694626259~exp=1694626859~hmac=da9abaa8cc4a9be501fc2446c7658e65a8edb2c2990b0f01a8985b2638f40724);
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    text-shadow: 2px 2px 5px grey;
+}
+
+/*------------ Main banner end -----------*/
+
+
+/*------------ Banner start -----------*/
+
+#des-img {
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+#description {
+    cursor: pointer;
+
+    border-radius: 15px;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+#description h1 {
+    font-weight: 800;
+}
+#description h6 {
+    text-decoration: underline orangered 2px solid;
+    font-weight: 700;
+}
+#description:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+#shop-btn {
+    color: #000;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+#shop-btn:hover {
+    color: #fff;
+    background-color: #000000;
+}
+#discount-btn h5 {
+    transition: all ease 0.2s;
+}
+#discount-btn h5:hover {
+    text-shadow: rgb(255, 255, 255) 3px 0px 3px;
+    transform: scale(1.05);
+    color: orangered;
+}
+
+/*------------ Banner end -----------*/
+
+
+/*------------ Animated Button start -----------*/
+
+.box-2 .btn {
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+.box-2 .btn-two {
+    color: #000;
+    transition: all 0.5s;
+    position: relative;
+}
+.box-2 .btn-two span {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+.box-2 .btn-two::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.box-2 .btn-two::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.box-2 .btn-two:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(0, 0, 0, 0);
+}
+.box-2 .btn-two:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Animated Button end-----------*/
+
+
+/* Category start -----------*/
+
+#cat-img {
+    object-fit: contain;
+    mix-blend-mode: darken;
+    height: 120px;
+}
+#cat-card {
+    background-color: #e8d0b3;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+#cat-card:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+}
+
+/*------------ Category end-----------*/
+
+
+/*------------ Footer start-----------*/
+
+footer {
+    background-color: #929fba;
+}
+#foot-img {
+    width: 150px;
+    object-fit: contain;
+    transition: all ease 0.5s;
+}
+#foot-img:hover {
+    transform: scale(1.1);
+}
+#foot-links {
+    color: #000;
+    transition: all ease 0.2s;
+}
+#foot-links:hover {
+    color: orangered;
+    transform: translate(10px);
+}
+#social-img img {
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s ease;
+}
+#social-img img:hover {
+    cursor: pointer;
+    transform: translateY(8px);
+}
+#copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#copyright h6 {
+    font-size: small;
+}
+
+/*------------ Footer end-----------*/
+
+
+/*------------ Login  start-----------*/
+#login-bg {
+    background: linear-gradient(rgba(4, 9, 30, 0.1), rgba(4, 9, 30, 0.3)),
+        url(https://img.freepik.com/premium-vector/hand-painted-mountain-landscape-background_1048-19216.jpg?w=360);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(-5px);
+    text-shadow: 1px 1px 3px white;
+    color: #000;
+}
+
+/*------------ Login end-----------*/
+
+
+/*------------ Item Cards start -----------*/
+
+#item-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    mix-blend-mode: darken;
+}
+#item-card {
+    background-color: #e8d0b3;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    transition: all ease 0.5s;
+    min-height: 350px;
+}
+#item-card:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+#item-card button {
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+#item-card button:hover {
+    background-color: #fff;
+    color: orangered;
+}
+
+/*------------ Item Cards end -----------*/
+
+
+/*------------ Modal start -----------*/
+
+#modal-img {
+    background-color: #e8d0b3;
+}
+#modal-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    mix-blend-mode: darken;
+}
+#modal-btn {
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 5px;
+    transition: all ease 0.5s;
+}
+#modal-btn:hover {
+    background-color: #e8d0b3;
+    color: orangered;
+}
+
+/*------------ Modal end -----------*/
+
+
+/*------------ Contact start -----------*/
+
+#contact-banner {
+    background: linear-gradient(rgba(124, 33, 0, 0.3), rgba(123, 33, 0, 0.3)),
+        url(https://img.freepik.com/free-photo/skyscraper_1112-1069.jpg?w=1060&t=st=1694764848~exp=1694765448~hmac=425b97b72d53dce02feb97113bc41a611e2b02f48054f67dd32117ab034474e2);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+/* #contact-banner h1{
+    text-shadow: #000 3px 0px 5px;
+    transition: all 0.5s ease;
+    font-size: 4rem;
+    
+} */
+/* #contact-banner h1:hover{
+    transform: scale(1.15);
+} */
+#contact-head {
+    width: fit-content;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    text-shadow: #000 3px 0px 3px;
+}
+#contact-head:hover {
+    text-shadow: #000 3px 0px 3px;
+    transform: scale(1.05);
+}
+#contact-info {
+    background-color: transparent;
+    transition: all 0.5s ease;
+    /* box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+    /* border: 1px solid grey; */
+    /* border-radius: 15px; */
+}
+#contact-form {
+    background-color: #fff;
+    color: #000;
+    transition: all 0.5s ease;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* border: 1px solid grey; */
+    border-radius: 15px;
+}
+/* #contact-info:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent;
+    transform: scale(1.02);
+} */
+#info {
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 1px #000;
+}
+#info h5 {
+    color: orangered;
+    text-shadow: 1px 1px 1px #fff;
+}
+#info:hover {
+    transform: translate(15px);
+}
+#contact ion-icon {
+    font-size: 20px;
+    /* margin-bottom: -5px; */
+    padding: 20px;
+    color: orangered;
+    border-radius: 50%;
+    background-color: #fff;
+}
+#contact-form input,
+#contact-form textarea {
+    border: none;
+    border-radius: 0;
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+#contact-btn {
+    transition: all 0.5s ease;
+    border: 2px solid orangered;
+    background-color: orangered;
+    border-radius: 5px;
+}
+#contact-btn:hover {
+    background-color: #fff;
+    border: 2px solid orangered;
+    outline: none;
+    color: orangered;
+}
+
+/*------------ Contact end ------------*/
+
+
+/*---------- About start -----------*/
+
+.about .about-bg {
+    position: relative;
+    background: url(https://images.unsplash.com/photo-1497384401032-2182d2687715?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWluaW1hbGlzdCUyMG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+.about .about-img {
+    position: absolute;
+    top: 35%;
+    width: 350px;
+    height: 420px;
+    background-color: #e8d0b3;
+    text-align: center;
+    padding: 25px;
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.about .about-img:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+#about-card {
+    background-color: #e8d0b3;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+#about-card1 {
+    background-color: #fff;
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+#about-card1 button {
+    background-color: orangered;
+    color: #fff;
+    border: 1px solid orangered;
+}
+#about-card1 button:hover {
+    color: orangered;
+    background-color: transparent;
+}
+#about-card:hover,
+#about-card1:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    border: 2px solid #000;
+}
+#about-card-img {
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    object-fit: contain;
+}
+#blog-img {
+    height: 200px;
+    object-fit: cover;
+}
+#highlight {
+    background-color: orangered;
+    color: #fff;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+#review-card {
+    box-shadow: 0px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+#review-card h5 {
+    border-bottom: 1px solid orangered;
+    padding-bottom: 4px;
+}
+#review-card img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin: auto;
+}
+#review-card:hover {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+#star {
+    color: orangered;
+}
+
+/*---------- About end -----------*/
